@@ -7,6 +7,8 @@
  * @package children_School
  */
 
+ define('THEME_URL',get_template_directory_uri());
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -141,7 +143,32 @@ function children_school_scripts() {
 	wp_enqueue_style( 'children-school-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'children-school-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'children-school-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
+	wp_enqueue_style('school-bootstrap', THEME_URL . '/assets/css/bootstrap.min.css', array(), _S_VERSION);
+	wp_enqueue_style('school-all', THEME_URL . '/assets/css/all.css', array(), _S_VERSION);
+	wp_enqueue_style('school-carousel', THEME_URL . '/assets/css/owl.carousel.css', array(), _S_VERSION);
+	wp_enqueue_style('school-settings', THEME_URL . '/assets/rs-plugin/css/settings.css', array(), _S_VERSION);
+	wp_enqueue_style('school-fabcybox', THEME_URL . '/assets/css/jquery.fancybox.min.css', array(), _S_VERSION);
+	wp_enqueue_style('school-animate', THEME_URL . '/assets/css/animate.css', array(), _S_VERSION);
+	wp_enqueue_style('school-main', THEME_URL . '/assets/css/style.css', array(), _S_VERSION);
+
+
+	
+
+
+	wp_enqueue_script('jquery', THEME_URL . '/assets/js/jquery.min.js',array(), '1.0.0', true);
+	wp_enqueue_script('bootstrap-js', THEME_URL . '/assets/js/bootstrap.min.js',array(), '1.0.0', true);
+	wp_enqueue_script('popper-js', THEME_URL . '/assets/js/poper.min.js',array(), '1.0.0', true);
+	wp_enqueue_script('rs-plugin', THEME_URL . '/assets/rs-plugin/js/jquery.themepunch.revolution.min.js',array(),'1.0.0', true);
+	wp_enqueue_script('rs-plugin-js', THEME_URL . '/assets/rs-plugin/js/jquery.themepunch.tools.min.js',array(), '1.0.0', true);
+	wp_enqueue_script('fancybox', THEME_URL . '/assets/js/jquery.fancybox.min.js',array(), '1.0.0', true);
+	wp_enqueue_script('animate', THEME_URL . '/assets/js/animate.js',array(), '1.0.0', true);
+	wp_enqueue_script('wow', THEME_URL . '/assets/js/wow.js',array(), '1.0.0', true);
+	wp_enqueue_script('owl-js', THEME_URL . '/assets/js/owl.carousel.js',array(), '1.0.0', true);
+	wp_enqueue_script('script-js', THEME_URL . '/assets/js/script.js',array(), '1.0.0', true);
+	wp_enqueue_script('navigation', THEME_URL . '/js/navigation.js',array(), '1.0.0', true);
+
+	wp_enqueue_script( 'children-school-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0.0', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
