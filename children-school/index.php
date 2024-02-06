@@ -24,21 +24,9 @@ get_header();
 <!-- Fav Icon -->
 <link rel="shortcut icon" href="favicon.ico">
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link href="css/all.css" rel="stylesheet">
-<link href="css/owl.carousel.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- <link rel="stylesheet" href="css/switcher.css"> -->
-<link rel="stylesheet" href="rs-plugin/css/settings.css">
-<!-- Jquery Fancybox CSS -->
-<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" media="screen" />
-<link href="css/animate.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet"  id="colors">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <title>International School System</title>
+
+<?php wp_head();?>
 </head>
 <body>
  
@@ -48,14 +36,14 @@ get_header();
 <div class="tp-banner-container">
   <div class="tp-banner">
     <ul>
-      <li data-slotamount="7" data-transition="3dcurtain-horizontal" data-masterspeed="1000" data-saveperformance="on"> <img alt="" src="images/dummy.png" data-lazyload="images/slider1.jpg">
+      <li data-slotamount="7" data-transition="3dcurtain-horizontal" data-masterspeed="1000" data-saveperformance="on"> <img alt="" src="<?php echo get_template_directory_uri();?>./assets/images/dummy.png" data-lazyload="<?php echo get_template_directory_uri();?>./assets/images/slider.jpg">
         <div class="caption lft large-title tp-resizeme slidertext2" data-x="center" data-y="170" data-speed="600" data-start="1600"><span> Education Bright Future </span></div>
         <div class="caption lfb large-title tp-resizeme slidertext3" data-x="center" data-y="260" data-speed="600" data-start="2200"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nibh dolor, gravida faucibus dolor consectetur, <br/>
           pulvinar rhoncus risus. Fusce vel rutrum mi. Suspendisse pretium tellus eu ipsum.</div>
         <div class="caption lfb large-title tp-resizeme slidertext4" data-x="330" data-y="350" data-speed="600" data-start="2800"> <a href="#"><i class="fas fa-edit"></i> Enroll Today</a> </div>
         <div class="caption lfb large-title tp-resizeme slidertext4 slidertext5" data-x="610" data-y="350" data-speed="600" data-start="3400"> <a href="#"><i class="far fa-calendar-alt"></i> Schedule a Tour</a> </div>
       </li>
-      <li data-slotamount="7" data-transition="slotzoom-horizontal" data-masterspeed="1000" data-saveperformance="on"> <img alt="" src="images/dummy.png" data-lazyload="images/slider.jpg">
+      <li data-slotamount="7" data-transition="slotzoom-horizontal" data-masterspeed="1000" data-saveperformance="on"> <img alt="" src="images/dummy.png" data-lazyload="<?php echo get_template_directory_uri();?>./assets/images/slider1.jpg">
         <div class="caption lft large-title tp-resizeme slidertext2" data-x="center" data-y="170" data-speed="600" data-start="1600"><span> International School </span></div>
         <div class="caption lfb large-title tp-resizeme slidertext3" data-x="center" data-y="260" data-speed="600" data-start="2200"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nibh dolor, gravida faucibus dolor consectetur, <br/>
           pulvinar rhoncus risus. Fusce vel rutrum mi. Suspendisse pretium tellus eu ipsum.</div>
@@ -76,7 +64,7 @@ get_header();
           <!-- single-course-categories -->
           <div class="categories-course">
             <div class="item-inner">
-              <div class="cours-icon"> <span class="coure-icon-inner"> <img src="images/teacher.png" alt=""> </span> </div>
+              <div class="cours-icon"> <span class="coure-icon-inner"> <img src="<?php echo get_template_directory_uri();?>./assets/images/teacher.png" alt=""> </span> </div>
               <div class="cours-title">
                 <h4>Expert teachers</h4>
                 <p>Lorem ipsum dolor sit amet, adipiscing elit. Vivamus nibh dolor gravida at eleifend</p>
@@ -89,7 +77,7 @@ get_header();
           <!-- single-course-categories -->
           <div class="categories-course">
             <div class="item-inner">
-              <div class="cours-icon"> <span class="coure-icon-inner"> <img src="images/book.png" alt=""> </span> </div>
+              <div class="cours-icon"> <span class="coure-icon-inner"> <img src="<?php echo get_template_directory_uri();?>./assets/images/book.png" alt=""> </span> </div>
               <div class="cours-title">
                 <h4>Quality Education</h4>
                 <p>Lorem ipsum dolor sit amet, adipiscing elit. Vivamus nibh dolor gravida at eleifend</p>
@@ -102,7 +90,7 @@ get_header();
           <!-- single-course-categories -->
           <div class="categories-course" >
             <div class="item-inner">
-              <div class="cours-icon"> <span class="coure-icon-inner"> <img src="images/support.png" alt=""> </span> </div>
+              <div class="cours-icon"> <span class="coure-icon-inner"> <img src="<?php echo get_template_directory_uri();?>./assets/images/support.png" alt=""> </span> </div>
               <div class="cours-title">
                 <h4>Life Time Support</h4>
                 <p>Lorem ipsum dolor sit amet, adipiscing elit. Vivamus nibh dolor gravida at eleifend</p>
@@ -115,7 +103,7 @@ get_header();
           <!-- single-course-categories -->
           <div class="categories-course">
             <div class="item-inner">
-              <div class="cours-icon"> <span class="coure-icon-inner"> <img src="images/scholarship.png" alt=""> </span> </div>
+              <div class="cours-icon"> <span class="coure-icon-inner"> <img src="<?php echo get_template_directory_uri();?>./assets/images/scholarship.png" alt=""> </span> </div>
               <div class="cours-title">
                 <h4>Scholarship News</h4>
                 <p>Lorem ipsum dolor sit amet, adipiscing elit. Vivamus nibh dolor gravida at eleifend</p>
@@ -136,7 +124,7 @@ get_header();
   <div class="container">
     <div class="row">
       <div class="col-lg-7">
-        <div class="aboutImg"><img src="images/aboutImg.png" alt=""></div>
+        <div class="aboutImg"><img src="<?php echo get_template_directory_uri();?>./assets/images/aboutImg.png" alt=""></div>
       </div>
       <div class="col-lg-5">
         <div class="about_box">
@@ -572,6 +560,7 @@ get_header();
   </div>
 </div>
 <!--Newsletter End--> 
+
 
 
 <?php get_footer();?>

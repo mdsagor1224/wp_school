@@ -150,6 +150,10 @@ function children_school_scripts() {
 	wp_enqueue_style('school-settings', THEME_URL . '/assets/rs-plugin/css/settings.css', array(), _S_VERSION);
 	wp_enqueue_style('school-fabcybox', THEME_URL . '/assets/css/jquery.fancybox.min.css', array(), _S_VERSION);
 	wp_enqueue_style('school-animate', THEME_URL . '/assets/css/animate.css', array(), _S_VERSION);
+
+	wp_register_style('FontAwesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+	wp_enqueue_style('FontAwesome');
+
 	wp_enqueue_style('school-main', THEME_URL . '/assets/css/style.css', array(), _S_VERSION);
 
 
